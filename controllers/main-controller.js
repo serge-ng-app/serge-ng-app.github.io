@@ -5,15 +5,13 @@ angular.module("testApp")
 	$scope.test = [] ;	
 	$http({method: "get", url: testsDataUrl})
 	.then(function (success) {
-		$scope.test = success.data;
-		
+		$scope.test = success.data;		
 	},
 	function (error) {		
 		$scope.data.error = error;
 	});
 
-	$scope.startTest = function (testName) {
-		
+	$scope.startTest = function (testName) {		
 		switch(testName){
 			case "Tests A" : $scope.showTest = "testA"; $scope.pageView = 'partials/testA_q1.html'
 			break;
